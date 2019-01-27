@@ -1,0 +1,2 @@
+- 1/21/2019 - qt5 cross compiling is working from a Ubuntu 16.04 VM. Was able to build the "dashboard" example from qtquickcontrols and run it on the pi.
+- 1/22/2019 - boot screen setup. boot time is ~20 secs to dasboard. boot logo comes up at ~ 10 seconds. Boot logo shows if dashboard quits/dies. Working through display/controller issues. Think display's onboard processing is bad. Trying to swap or get another to test.

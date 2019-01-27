@@ -1,0 +1,10 @@
+rsync -avz pi@192.168.2.2:/lib sysroot
+rsync -avz pi@192.168.2.2:/usr/include sysroot/usr
+rsync -avz pi@192.168.2.2:/usr/lib sysroot/usr
+rsync -avz pi@192.168.2.2:/opt/vc sysroot/opt
+
+# Making qtbase
+
+1. clone it
+2. Replace the data in (qtbase/mkspecs/devices/linux-rasp-pi3-g++/qmake.conf) with the contents of docs/software/patched_files/qmakeconf_qtbase_mkspecs_devices.conf
+3. ./configure -release -opengl es2 -device linux-rasp-pi3-g++ -device-option CROSS_COMPILE=~/raspi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf- -sysroot ~/raspi/sysroot -opensource -confirm-license -make libs -prefix /usr/local/qt5pi -extprefix ~/raspi/qt5pi -hostprefix ~/raspi/qt5 -v -no-use-gold-linker -no-gbm

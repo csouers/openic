@@ -1,0 +1,4 @@
+Disable vim automatic visual mode on mouse select
+
+issue: :set mouse-=a
+add to ~/.vimrc: set mouse-=a
