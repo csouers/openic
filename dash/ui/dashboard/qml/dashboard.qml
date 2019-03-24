@@ -88,6 +88,7 @@ Window {
                 height: 472
                 color: "#ffffff"
                 text: qsTr("75")
+                font.family: "Verdana"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 fontSizeMode: Text.Fit
