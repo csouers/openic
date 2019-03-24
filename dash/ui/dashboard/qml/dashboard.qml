@@ -80,46 +80,25 @@ Window {
             spacing: container.width * 0.02
             anchors.centerIn: parent
 
-            TurnIndicator {
-                id: leftIndicator
-                anchors.verticalCenter: parent.verticalCenter
-                width: height
-                height: container.height * 0.1 - gaugeRow.spacing
 
-                direction: Qt.LeftArrow
-                on: valueSource.turnSignal == Qt.LeftArrow
-            }
+
             Text {
-                id: name
-                text: qsTr("text")
-            }
-
-            LargeSpeedometerStyle  {
                 id: speedometer
+                width: 301
+                height: 472
+                color: "#ffffff"
+                text: qsTr("75")
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                fontSizeMode: Text.Fit
                 anchors.verticalCenter: parent.verticalCenter
-                // We set the width to the height, because the height will always be
-                // the more limited factor. Also, all circular controls letterbox
-                // their contents to ensure that they remain circular. However, we
-                // don't want to extra space on the left and right of our gauges,
-                // because they're laid out horizontally, and that would create
-                // large horizontal gaps between gauges on wide screens.
-                width: height
-                height: container.height * 0.5
-                text: "0"
-
-                //style: LargeSpeedometerStyle {}
+                font.pixelSize: 400
+                styleColor: "#ffffff"
             }
 
-            TurnIndicator {
-                id: rightIndicator
-                anchors.verticalCenter: parent.verticalCenter
-                width: height
-                height: container.height * 0.1 - gaugeRow.spacing
-
-                direction: Qt.RightArrow
-                on: valueSource.turnSignal == Qt.RightArrow
-            }
 
         }
     }
 }
+
+
