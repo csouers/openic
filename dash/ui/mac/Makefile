@@ -53,8 +53,7 @@ OBJECTS_DIR   = ./
 SOURCES       = ../dashboard/main.cpp qrc_dashboard.cpp
 OBJECTS       = main.o \
 		qrc_dashboard.o
-DIST          = ../dashboard/qml/LargeSpeedometerStyle.qml \
-		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_pre.prf \
+DIST          = /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/qdevice.pri \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/device_config.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/common/unix.conf \
@@ -716,17 +715,16 @@ compiler_rcc_clean:
 qrc_dashboard.cpp: ../dashboard/dashboard.qrc \
 		/Users/csouers/Qt/5.11.3/clang_64/bin/rcc \
 		../dashboard/qml/TurnIndicator.qml \
-		../dashboard/qml/iconfinder_SpeedOMeter_2501879_whiteidle.svg \
 		../dashboard/qml/dashboard.qml \
 		../dashboard/qml/IconGaugeStyle.qml \
-		../dashboard/qml/iconfinder_Upper_2501878_onwhite.svg \
 		../dashboard/qml/DashboardGaugeStyle.qml \
-		../dashboard/qml/iconfinder_Upper_2501878_idle.svg \
 		../dashboard/qml/TachometerStyle.qml \
 		../dashboard/qml/ValueSource.qml \
-		../dashboard/qml/iconfinder_SpeedOMeter_2501879_white.svg \
-		../dashboard/images/temperature-icon.png \
-		../dashboard/images/fuel-icon.png \
+		../dashboard/images/sources.rtf \
+		../dashboard/images/iconfinder_SpeedOMeter_2501879_idle.svg \
+		../dashboard/images/iconfinder_Upper_2501878_onwhite.svg \
+		../dashboard/images/iconfinder_Upper_2501878_idle.svg \
+		../dashboard/images/iconfinder_SpeedOMeter_2501879_white.svg \
 		../dashboard/fonts/DejaVuSans.ttf
 	/Users/csouers/Qt/5.11.3/clang_64/bin/rcc -name dashboard ../dashboard/dashboard.qrc -o qrc_dashboard.cpp
 
