@@ -81,20 +81,18 @@ Window {
             height: 205
             anchors.top: parent.top
             anchors.topMargin: 35
-            anchors.horizontalCenterOffset: 0
             anchors.horizontalCenter: parent.horizontalCenter
+            layoutDirection: Qt.LeftToRight
+            antialiasing: false
             spacing: 38
 
 
 
             Image {
-                id: cruiseon
+                id: highbeam
                 width: 150
                 height: 150
-                anchors.verticalCenterOffset: 0
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.leftMargin: 0
                 fillMode: Image.PreserveAspectFit
                 source: "../images/iconfinder_Upper_2501878_onwhite.png"
             }
@@ -108,7 +106,6 @@ Window {
                 color: "#ffffff"
                 text: qsTr("59")
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
                 transformOrigin: Item.Center
                 visible: true
                 clip: false
@@ -124,15 +121,15 @@ Window {
             }
 
             Image {
-                id: highbeam
+                id: cruiseon
                 width: 150
                 height: 150
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.right: parent.right
-                anchors.rightMargin: 0
                 fillMode: Image.PreserveAspectFit
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
             }
+
+
 
 
 
@@ -156,7 +153,40 @@ Window {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*##^## Designer {
-    D{i:4;anchors_height:100;anchors_width:100}D{i:5;anchors_height:472;anchors_width:301;anchors_x:0;anchors_y:0}
+    D{i:4;anchors_height:150;anchors_width:150}D{i:5;anchors_height:300;anchors_width:299;anchors_x:0;anchors_y:0}
+D{i:6;anchors_height:150;anchors_width:100}D{i:3;anchors_height:205;anchors_width:661;anchors_y:0}
 }
  ##^##*/
