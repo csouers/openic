@@ -9,5 +9,10 @@
         <file>qml/TachometerStyle.qml</file>
         <file>qml/TurnIndicator.qml</file>
         <file>qml/ValueSource.qml</file>
+        <file>images/iconfinder_SpeedOMeter_2501879_idle.svg</file>
+        <file>images/iconfinder_SpeedOMeter_2501879_white.svg</file>
+        <file>images/iconfinder_Upper_2501878_idle.svg</file>
+        <file>images/iconfinder_Upper_2501878_onwhite.svg</file>
+        <file>images/sources.rtf</file>
     </qresource>
 </RCC>

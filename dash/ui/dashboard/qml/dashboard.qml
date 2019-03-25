@@ -77,25 +77,63 @@ Window {
 
         Row {
             id: gaugeRow
-            spacing: container.width * 0.02
-            anchors.centerIn: parent
+            width: 661
+            height: 205
+            anchors.top: parent.top
+            anchors.topMargin: 35
+            anchors.horizontalCenterOffset: 0
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing: 38
 
 
+
+            Image {
+                id: cruiseon
+                width: 150
+                height: 150
+                anchors.verticalCenterOffset: 0
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.left: parent.left
+                anchors.leftMargin: 0
+                fillMode: Image.PreserveAspectFit
+                source: "../images/iconfinder_Upper_2501878_onwhite.svg"
+            }
 
             Text {
                 id: speedometer
-                width: 301
-                height: 472
+                x: 0
+                y: 0
+                width: 299
+                height: 300
                 color: "#ffffff"
-                text: qsTr("75")
+                text: qsTr("59")
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                transformOrigin: Item.Center
+                visible: true
+                clip: false
+                renderType: Text.QtRendering
+                font.weight: Font.Normal
+                style: Text.Normal
                 font.family: "Verdana"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 fontSizeMode: Text.Fit
-                anchors.verticalCenter: parent.verticalCenter
-                font.pixelSize: 400
+                font.pixelSize: 150
                 styleColor: "#ffffff"
             }
+
+            Image {
+                id: highbeam
+                width: 150
+                height: 150
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.right: parent.right
+                anchors.rightMargin: 0
+                fillMode: Image.PreserveAspectFit
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.svg"
+            }
+
 
 
         }
@@ -103,3 +141,18 @@ Window {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*##^## Designer {
+    D{i:4;anchors_height:100;anchors_width:100}D{i:5;anchors_height:472;anchors_width:301;anchors_x:0;anchors_y:0}
+}
+ ##^##*/

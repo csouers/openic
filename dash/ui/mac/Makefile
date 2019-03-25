@@ -215,6 +215,7 @@ DIST          = ../dashboard/qml/LargeSpeedometerStyle.qml \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_post.prf \
+		../dashboard/.qmake.stash \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/toolchain.prf \
@@ -424,6 +425,7 @@ Makefile: ../dashboard/dashboard.pro /Users/csouers/Qt/5.11.3/clang_64/mkspecs/m
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/toolchain.prf \
@@ -619,6 +621,7 @@ Makefile: ../dashboard/dashboard.pro /Users/csouers/Qt/5.11.3/clang_64/mkspecs/m
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/qt_config.prf:
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/toolchain.prf:
@@ -693,6 +696,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r dashboard.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -712,11 +716,15 @@ compiler_rcc_clean:
 qrc_dashboard.cpp: ../dashboard/dashboard.qrc \
 		/Users/csouers/Qt/5.11.3/clang_64/bin/rcc \
 		../dashboard/qml/TurnIndicator.qml \
+		../dashboard/qml/iconfinder_SpeedOMeter_2501879_whiteidle.svg \
 		../dashboard/qml/dashboard.qml \
 		../dashboard/qml/IconGaugeStyle.qml \
+		../dashboard/qml/iconfinder_Upper_2501878_onwhite.svg \
 		../dashboard/qml/DashboardGaugeStyle.qml \
+		../dashboard/qml/iconfinder_Upper_2501878_idle.svg \
 		../dashboard/qml/TachometerStyle.qml \
 		../dashboard/qml/ValueSource.qml \
+		../dashboard/qml/iconfinder_SpeedOMeter_2501879_white.svg \
 		../dashboard/images/temperature-icon.png \
 		../dashboard/images/fuel-icon.png \
 		../dashboard/fonts/DejaVuSans.ttf
