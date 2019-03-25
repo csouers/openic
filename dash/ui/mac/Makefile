@@ -721,10 +721,14 @@ qrc_dashboard.cpp: ../dashboard/dashboard.qrc \
 		../dashboard/qml/TachometerStyle.qml \
 		../dashboard/qml/ValueSource.qml \
 		../dashboard/images/sources.rtf \
-		../dashboard/images/iconfinder_SpeedOMeter_2501879_idle.svg \
-		../dashboard/images/iconfinder_Upper_2501878_onwhite.svg \
-		../dashboard/images/iconfinder_Upper_2501878_idle.svg \
-		../dashboard/images/iconfinder_SpeedOMeter_2501879_white.svg \
+		../dashboard/images/iconfinder_Upper_2501878_onwhite.png \
+		../dashboard/images/iconfinder_Upper_2501878_idle.png \
+		../dashboard/images/iconfinder_SpeedOMeter_2501879_white.png \
+		../dashboard/images/iconfinder_SpeedOMeter_2501879_whiteidle.png \
+		../dashboard/images/Original/iconfinder_SpeedOMeter_2501879_idle.svg \
+		../dashboard/images/Original/iconfinder_Upper_2501878_onwhite.svg \
+		../dashboard/images/Original/iconfinder_Upper_2501878_idle.svg \
+		../dashboard/images/Original/iconfinder_SpeedOMeter_2501879_white.svg \
 		../dashboard/fonts/DejaVuSans.ttf
 	/Users/csouers/Qt/5.11.3/clang_64/bin/rcc -name dashboard ../dashboard/dashboard.qrc -o qrc_dashboard.cpp
 

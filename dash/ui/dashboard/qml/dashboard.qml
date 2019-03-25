@@ -96,7 +96,7 @@ Window {
                 anchors.left: parent.left
                 anchors.leftMargin: 0
                 fillMode: Image.PreserveAspectFit
-                source: "../images/iconfinder_Upper_2501878_onwhite.svg"
+                source: "../images/iconfinder_Upper_2501878_onwhite.png"
             }
 
             Text {
@@ -131,7 +131,7 @@ Window {
                 anchors.right: parent.right
                 anchors.rightMargin: 0
                 fillMode: Image.PreserveAspectFit
-                source: "../images/iconfinder_SpeedOMeter_2501879_white.svg"
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
             }
 
 
@@ -139,6 +139,8 @@ Window {
         }
     }
 }
+
+
 
 
 
