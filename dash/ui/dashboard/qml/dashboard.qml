@@ -92,6 +92,8 @@ Window {
                 id: highbeam
                 width: 150
                 height: 150
+                antialiasing: true
+                scale: 0.7
                 anchors.verticalCenter: parent.verticalCenter
                 fillMode: Image.PreserveAspectFit
                 source: "../images/iconfinder_Upper_2501878_onwhite.png"
@@ -124,6 +126,8 @@ Window {
                 id: cruiseon
                 width: 150
                 height: 150
+                antialiasing: true
+                scale: 0.7
                 anchors.verticalCenter: parent.verticalCenter
                 fillMode: Image.PreserveAspectFit
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
@@ -136,6 +140,10 @@ Window {
         }
     }
 }
+
+
+
+
 
 
 
