@@ -1,4 +1,4 @@
-# OpenIC
+# openic
 
 An open source instrument cluster designed around a 1920x720 LCD and a Raspberry Pi. Primary test subject is a 1998 Jeep Grand Cherokee which communicates via CCD. We will take CCD and forward it to CAN and read in the CAN. Signal definitions will be done via DBC file.
 
