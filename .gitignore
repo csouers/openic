@@ -1,2 +1,4 @@
 pythonenv/
 deployment-config.json
+/dash/ui/mac_mbp/*
+/dash/ui/mac_desktop/*

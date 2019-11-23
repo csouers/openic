@@ -15,7 +15,7 @@ OTHER_FILES += \
     qml/IconGaugeStyle.qml \
     qml/TachometerStyle.qml \
     qml/TurnIndicator.qml \
-    qml/ValueSource.qml
+    qml/ValueSource.qml \
 
 target.path = $$[QT_INSTALL_EXAMPLES]/quickcontrols/extras/dashboard
 INSTALLS += target

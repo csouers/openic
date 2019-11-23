@@ -16,5 +16,37 @@
         <file>images/iconfinder_SpeedOMeter_2501879_whiteidle.png</file>
         <file>images/iconfinder_Upper_2501878_idle.png</file>
         <file>images/iconfinder_Upper_2501878_onwhite.png</file>
+        <file>Uihelper.js</file>
+        <file>images/111836-car-dashboard-signals/license/license.html</file>
+        <file>images/111836-car-dashboard-signals/png/air-conditioning.png</file>
+        <file>images/111836-car-dashboard-signals/png/air-outlet.png</file>
+        <file>images/111836-car-dashboard-signals/png/airbag.png</file>
+        <file>images/111836-car-dashboard-signals/png/battery.png</file>
+        <file>images/111836-car-dashboard-signals/png/brake-system-warning.png</file>
+        <file>images/111836-car-dashboard-signals/png/dome-light.png</file>
+        <file>images/111836-car-dashboard-signals/png/doors.png</file>
+        <file>images/111836-car-dashboard-signals/png/engine-coolant.png</file>
+        <file>images/111836-car-dashboard-signals/png/fog-light.png</file>
+        <file>images/111836-car-dashboard-signals/png/fuel-filling.png</file>
+        <file>images/111836-car-dashboard-signals/png/fuel.png</file>
+        <file>images/111836-car-dashboard-signals/png/glowplug.png</file>
+        <file>images/111836-car-dashboard-signals/png/hazard.png</file>
+        <file>images/111836-car-dashboard-signals/png/high-beam.png</file>
+        <file>images/111836-car-dashboard-signals/png/hood.png</file>
+        <file>images/111836-car-dashboard-signals/png/light.png</file>
+        <file>images/111836-car-dashboard-signals/png/low-beam.png</file>
+        <file>images/111836-car-dashboard-signals/png/malfunction-indicador.png</file>
+        <file>images/111836-car-dashboard-signals/png/oil.png</file>
+        <file>images/111836-car-dashboard-signals/png/parking-lights.png</file>
+        <file>images/111836-car-dashboard-signals/png/rear-window-defrost.png</file>
+        <file>images/111836-car-dashboard-signals/png/recirculation.png</file>
+        <file>images/111836-car-dashboard-signals/png/seatbelt.png</file>
+        <file>images/111836-car-dashboard-signals/png/trunk.png</file>
+        <file>images/111836-car-dashboard-signals/png/turn-signals.png</file>
+        <file>images/111836-car-dashboard-signals/png/ventilating-fan.png</file>
+        <file>images/111836-car-dashboard-signals/png/warning.png</file>
+        <file>images/111836-car-dashboard-signals/png/windshield-defrost.png</file>
+        <file>images/111836-car-dashboard-signals/png/windshield-washer.png</file>
+        <file>images/111836-car-dashboard-signals/png/winshield-wiper.png</file>
     </qresource>
 </RCC>
