@@ -689,6 +689,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_dashboard.cpp
 qrc_dashboard.cpp: ../dashboard/dashboard.qrc \
 		../../../../Qt/5.11.3/gcc_64/bin/rcc \
+		../dashboard/Uihelper.js \
 		../dashboard/qml/TurnIndicator.qml \
 		../dashboard/qml/dashboard.qml \
 		../dashboard/qml/IconGaugeStyle.qml \
@@ -704,6 +705,37 @@ qrc_dashboard.cpp: ../dashboard/dashboard.qrc \
 		../dashboard/images/Original/iconfinder_Upper_2501878_onwhite.svg \
 		../dashboard/images/Original/iconfinder_Upper_2501878_idle.svg \
 		../dashboard/images/Original/iconfinder_SpeedOMeter_2501879_white.svg \
+		../dashboard/images/111836-car-dashboard-signals/png/battery.png \
+		../dashboard/images/111836-car-dashboard-signals/png/fuel.png \
+		../dashboard/images/111836-car-dashboard-signals/png/seatbelt.png \
+		../dashboard/images/111836-car-dashboard-signals/png/dome-light.png \
+		../dashboard/images/111836-car-dashboard-signals/png/turn-signals.png \
+		../dashboard/images/111836-car-dashboard-signals/png/rear-window-defrost.png \
+		../dashboard/images/111836-car-dashboard-signals/png/trunk.png \
+		../dashboard/images/111836-car-dashboard-signals/png/hazard.png \
+		../dashboard/images/111836-car-dashboard-signals/png/ventilating-fan.png \
+		../dashboard/images/111836-car-dashboard-signals/png/windshield-defrost.png \
+		../dashboard/images/111836-car-dashboard-signals/png/warning.png \
+		../dashboard/images/111836-car-dashboard-signals/png/air-conditioning.png \
+		../dashboard/images/111836-car-dashboard-signals/png/fog-light.png \
+		../dashboard/images/111836-car-dashboard-signals/png/winshield-wiper.png \
+		../dashboard/images/111836-car-dashboard-signals/png/airbag.png \
+		../dashboard/images/111836-car-dashboard-signals/png/glowplug.png \
+		../dashboard/images/111836-car-dashboard-signals/png/brake-system-warning.png \
+		../dashboard/images/111836-car-dashboard-signals/png/hood.png \
+		../dashboard/images/111836-car-dashboard-signals/png/parking-lights.png \
+		../dashboard/images/111836-car-dashboard-signals/png/recirculation.png \
+		../dashboard/images/111836-car-dashboard-signals/png/air-outlet.png \
+		../dashboard/images/111836-car-dashboard-signals/png/malfunction-indicador.png \
+		../dashboard/images/111836-car-dashboard-signals/png/high-beam.png \
+		../dashboard/images/111836-car-dashboard-signals/png/windshield-washer.png \
+		../dashboard/images/111836-car-dashboard-signals/png/fuel-filling.png \
+		../dashboard/images/111836-car-dashboard-signals/png/doors.png \
+		../dashboard/images/111836-car-dashboard-signals/png/oil.png \
+		../dashboard/images/111836-car-dashboard-signals/png/engine-coolant.png \
+		../dashboard/images/111836-car-dashboard-signals/png/light.png \
+		../dashboard/images/111836-car-dashboard-signals/png/low-beam.png \
+		../dashboard/images/111836-car-dashboard-signals/license/license.html \
 		../dashboard/fonts/DejaVuSans.ttf
 	/home/chris/Qt/5.11.3/gcc_64/bin/rcc -name dashboard ../dashboard/dashboard.qrc -o qrc_dashboard.cpp
 

@@ -119,7 +119,7 @@ Window {
             anchors.bottomMargin: 35
             anchors.horizontalCenter: parent.horizontalCenter
             layoutDirection: Qt.LeftToRight
-            antialiasing: True
+            antialiasing: true
             spacing: 38
 
             Rectangle {
