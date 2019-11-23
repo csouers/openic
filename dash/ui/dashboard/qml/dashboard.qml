@@ -48,16 +48,16 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.2
-import QtQuick.Window 2.1
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 1.4
-import QtQuick.Controls.Styles 1.4
-import QtQuick.Extras 1.4
+import QtQuick 2.11 //
+import QtQuick.Window 2.11 //
+import QtQuick.Layouts 1.9 //
+import QtQuick.Controls 1.5 //
+import QtQuick.Controls.Styles 1.4 //
+import QtQuick.Extras 1.4 //
 import "qrc:/Uihelper.js" as UIHelper
 
 Window {
-    id: root
+    id: window
     visible: true
     // HIDPI
     //    width: 1920
@@ -73,173 +73,122 @@ Window {
     //        id: valueSource
     //    }
 
+    Shortcut {
+        sequence: "E"
+        onActivated: Qt.quit()
+    }
     // Dashboards are typically in a landscape orientation, so we need to ensure
     // our height is never greater than our width.
+
     Item {
-        id: container
-        width: root.width
-        height: Math.min(root.width, root.height)
-        anchors.centerIn: parent
+        id: mainContainer
+        width: window.width
+        height: Math.min(window.width, window.height) - (window.height * 0.1)
+        scale: 1
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
 
-        RowLayout{
+        Rectangle {
+            id: rectangleTop
+            color: "#393939"
+            anchors.fill: parent
+        }
 
-            Column { //set the left data column
-                id:leftColumn
-                height: root.height * 0.8
-                width: root.height * 0.4
-                anchors.leftMargin: 35
-                anchors.left: parent.left
-                anchors.verticalCenter: parent.verticalCenter
+    }
+    Item {
+        id: bottomContainer
+        width: window.width
+        height: Math.min(window.width, window.height) - (window.height * 0.9)
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
 
+        Rectangle {
+            color: "#595959"
+            anchors.fill: parent
+        }
+        RowLayout {
+            id: lightRow
+            spacing: 1
+            height: bottomContainer.height
+            width: bottomContainer.width
 
-                Rectangle {
-                    id: leftColumnRectangle
-                    color: "#949494"
-                    height: leftColumn.height
-                    width: leftColumn.width
-
-                    Image {
-                        id: cruiseonxxx
-                        width: root.height * 0.075
-                        height: root.height * 0.075
-                        fillMode: Image.PreserveAspectFit
-                        visible: true
-                        clip: false
-                        antialiasing: true
-                        source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                    }
-
-                }
+            Image {
+                id: image
+                Layout.maximumWidth: parent.width
+                Layout.maximumHeight: parent.height
+                //width: bottomContainer.height
+                //height: bottomContainer.height
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
+            }
+            Image {
+                id: image1
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.maximumWidth: parent.width
+                Layout.maximumHeight: parent.height
+                //width: bottomContainer.height
+                //height: bottomContainer.height
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
+            }
+            Image {
+                id: image2
+                Layout.maximumWidth: parent.width
+                Layout.maximumHeight: parent.height
+                //width: bottomContainer.height
+                //height: bottomContainer.height
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
+            }
+            Image {
+                id: image3
+                Layout.maximumWidth: parent.width
+                Layout.maximumHeight: parent.height
+                //width: bottomContainer.height
+                //height: bottomContainer.height
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
+            }
+            Image {
+                id: image4
+                Layout.maximumWidth: parent.width
+                Layout.maximumHeight: parent.height
+                //width: bottomContainer.height
+                //height: bottomContainer.height
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
             }
 
-            Row { //set the middle top-middle gauge/icon cluster
-                id: gaugeRow
-                width: root.width * 0.5
-                height: root.height * 0.3
-                anchors.top: parent.top
-                anchors.topMargin: root.height * 0.08
-                anchors.horizontalCenter: parent.horizontalCenter
-                //layoutDirection: Qt.LeftToRight
-                antialiasing: true
-
-                Rectangle {
-                    id: gaugeRowRectangle
-                    color: "#949494"
-                    height: parent.height
-                    width: parent.width
-
-                    Row {
-                        id: gaugeRowRow
-                        height: parent.height
-                        width: parent.width
-                        antialiasing: true
-                        spacing: 38
-
-
-                        Image {
-                            id: highbeam
-                            antialiasing: true
-                            width: parent.height
-                            height: parent.height
-                            anchors.verticalCenter: parent.verticalCenter
-                            //scale: 0.7
-                            fillMode: Image.PreserveAspectFit
-                            source: "../images/iconfinder_Upper_2501878_onwhite.png"
-                        }
-
-                        Text {
-                            id: speedometer
-                            color: "#ffffff"
-                            text: qsTr("59")
-                            anchors.verticalCenter: parent.verticalCenter
-                            horizontalAlignment: Text.AlignHCenter
-                            font.pointSize: 70
-                            //visible: true
-                            clip: false
-                            renderType: Text.QtRendering
-                            font.weight: Font.Normal
-                            style: Text.Normal
-                            font.family: "Verdana"
-                            //horizontalAlignment: Text.AlignHCenter
-                            //verticalAlignment: Text.AlignVCenter
-                            fontSizeMode: Text.Fit
-                            styleColor: "#ffffff"
-                        }
-
-                        Image {
-                            width: parent.height
-                            height: parent.height
-                            anchors.verticalCenter: parent.verticalCenter
-                            id: cruiseon
-                            smooth: true
-                            scale: 1
-                            antialiasing: true
-                            //scale: 0.7
-                            fillMode: Image.PreserveAspectFit
-                            source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                        }
-
-                    }
-
-                }
-            }
-
-            Row { //set the bottom row of warning lights
-                id: lightRow
-                anchors.bottom: root.bottom
-                anchors.bottomMargin: root.height * 0.08
-                anchors.horizontalCenter: root.horizontalCenter
-                layoutDirection: Qt.LeftToRight
-                height: root.height * 0.2
-                width: root.width * 0.6
-
-                Rectangle {
-                    id: lightRowRectangle
-                    color: "#949494"
-                    height: parent.height
-                    width: parent.width
-
-                    Grid {
-                        id: lightRowGrid
-                        height: root.height * 0.075
-                        antialiasing: true
-                        spacing: 38
-                        rows: 1
-                        columns: 4
-
-                        Image {
-                            id: cruiseonx
-                            width: root.height * 0.075
-                            height: root.height * 0.075
-                            visible: true
-                            clip: false
-                            antialiasing: true
-                            source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                        }
-                        Image {
-                            id: cruiseonxy
-                            width: root.height * 0.075
-                            height: root.height * 0.075
-                            antialiasing: true
-                            source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                        }
-                        Image {
-                            id: cruiseonxz
-                            width: root.height * 0.075
-                            height: root.height * 0.075
-                            antialiasing: true
-                            source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                        }
-                        Image {
-                            id: cruiseonxyzz
-                            width: root.height * 0.075
-                            height: root.height * 0.075
-                            antialiasing: true
-                            source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
-                        }
-                    }
-                }
-            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*##^## Designer {
+    D{i:3;anchors_height:432;anchors_width:1280}D{i:5;anchors_height:200;anchors_width:200}
+D{i:6;anchors_height:200;anchors_width:200}D{i:4;anchors_height:432;anchors_width:1280}
+}
+ ##^##*/

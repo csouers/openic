@@ -20,4 +20,5 @@ OTHER_FILES += \
 target.path = $$[QT_INSTALL_EXAMPLES]/quickcontrols/extras/dashboard
 INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    qml/dashboard_copy.qml
