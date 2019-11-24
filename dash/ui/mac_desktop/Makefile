@@ -53,7 +53,8 @@ OBJECTS_DIR   = ./
 SOURCES       = ../dashboard/main.cpp qrc_dashboard.cpp
 OBJECTS       = main.o \
 		qrc_dashboard.o
-DIST          = /Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_pre.prf \
+DIST          = ../dashboard/qml/dashboard_copy.qml \
+		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/qdevice.pri \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/features/device_config.prf \
 		/Users/csouers/Qt/5.11.3/clang_64/mkspecs/common/unix.conf \
