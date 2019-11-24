@@ -56,6 +56,7 @@ import QtQuick.Controls.Styles 1.4 //
 import QtQuick.Extras 1.4 //
 import "qrc:/Uihelper.js" as UIHelper
 
+
 Window {
     id: window
     visible: true
@@ -77,6 +78,8 @@ Window {
         sequence: "E"
         onActivated: Qt.quit()
     }
+
+    readonly property bool debugRectangles: true
     // Dashboards are typically in a landscape orientation, so we need to ensure
     // our height is never greater than our width.
 
@@ -92,32 +95,33 @@ Window {
             id: rectangleTop
             color: "#393939"
             anchors.fill: parent
+            visible: debugRectangles
         }
 
     }
     Item {
         id: bottomContainer
-        width: window.width
+        width: window.width * 0.8
         height: Math.min(window.width, window.height) - (window.height * 0.9)
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
 
         Rectangle {
             color: "#595959"
             anchors.fill: parent
+            visible: debugRectangles
         }
         RowLayout {
             id: lightRow
+            width: parent.width
+            height: parent.height
             spacing: 1
-            height: bottomContainer.height
-            width: bottomContainer.width
 
             Image {
                 id: image
-                Layout.maximumWidth: parent.width
+                Layout.maximumWidth: lightRow.height * 1.5
                 Layout.maximumHeight: parent.height
-                //width: bottomContainer.height
-                //height: bottomContainer.height
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
                 fillMode: Image.PreserveAspectFit
@@ -125,44 +129,43 @@ Window {
             Image {
                 id: image1
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                Layout.maximumWidth: parent.width
+                Layout.maximumWidth: lightRow.height * 1.5
                 Layout.maximumHeight: parent.height
-                //width: bottomContainer.height
-                //height: bottomContainer.height
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
                 fillMode: Image.PreserveAspectFit
             }
             Image {
                 id: image2
-                Layout.maximumWidth: parent.width
+                Layout.maximumWidth: lightRow.height * 1.5
                 Layout.maximumHeight: parent.height
-                //width: bottomContainer.height
-                //height: bottomContainer.height
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
                 fillMode: Image.PreserveAspectFit
             }
             Image {
                 id: image3
-                Layout.maximumWidth: parent.width
+                Layout.maximumWidth: lightRow.height * 1.5
                 Layout.maximumHeight: parent.height
-                //width: bottomContainer.height
-                //height: bottomContainer.height
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
                 fillMode: Image.PreserveAspectFit
             }
             Image {
                 id: image4
-                Layout.maximumWidth: parent.width
+                Layout.maximumWidth: lightRow.height * 1.5
                 Layout.maximumHeight: parent.height
-                //width: bottomContainer.height
-                //height: bottomContainer.height
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
                 fillMode: Image.PreserveAspectFit
             }
-
+            Image {
+                id: image5
+                Layout.maximumWidth: lightRow.height * 1.5
+                Layout.maximumHeight: parent.height
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                source: "../images/iconfinder_SpeedOMeter_2501879_white.png"
+                fillMode: Image.PreserveAspectFit
+            }
         }
     }
 }
@@ -171,24 +174,7 @@ Window {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*##^## Designer {
-    D{i:3;anchors_height:432;anchors_width:1280}D{i:5;anchors_height:200;anchors_width:200}
-D{i:6;anchors_height:200;anchors_width:200}D{i:4;anchors_height:432;anchors_width:1280}
+    D{i:3;anchors_height:432;anchors_width:1280}
 }
  ##^##*/
