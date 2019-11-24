@@ -53,9 +53,14 @@
 #include <QtGui/QFont>
 #include <QtGui/QFontDatabase>
 
+#include "carstate.h"
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+
+    // get car data
+    qmlRegisterType<CarState>("io.carstate", 1, 0, "CarState");
 
     QFontDatabase::addApplicationFont(":/fonts/DejaVuSans.ttf");
     app.setFont(QFont("DejaVu Sans"));

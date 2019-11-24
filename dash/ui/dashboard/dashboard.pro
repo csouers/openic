@@ -4,7 +4,8 @@ INCLUDEPATH += .
 QT += quick
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    carstate.cpp
 
 RESOURCES += \
     dashboard.qrc
@@ -22,3 +23,6 @@ INSTALLS += target
 
 DISTFILES += \
     qml/dashboard_copy.qml
+
+HEADERS += \
+    carstate.h

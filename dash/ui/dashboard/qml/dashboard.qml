@@ -56,6 +56,7 @@ import QtQuick.Controls.Styles 1.4 //
 import QtQuick.Extras 1.4 //
 import "qrc:/Uihelper.js" as UIHelper
 
+import io.carstate 1.0
 
 Window {
     id: window
@@ -74,12 +75,17 @@ Window {
     //        id: valueSource
     //    }
 
+    CarState {
+        id: carstate
+    }
+
     Shortcut {
         sequence: "E"
         onActivated: Qt.quit()
     }
-
+    // define some variables to use later
     readonly property bool debugRectangles: true
+
     // Dashboards are typically in a landscape orientation, so we need to ensure
     // our height is never greater than our width.
 
@@ -96,6 +102,17 @@ Window {
             color: "#393939"
             anchors.fill: parent
             visible: debugRectangles
+        }
+
+        Text {
+            id: element
+            color: "#ffffff"
+            text: carstate.carSpeed
+            font.pixelSize: 40
+            fontSizeMode: Text.HorizontalFit
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
         }
 
     }
@@ -169,6 +186,16 @@ Window {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
