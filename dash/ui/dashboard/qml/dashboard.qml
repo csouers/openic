@@ -62,8 +62,8 @@ Window {
     id: window
     visible: true
     // HIDPI
-    //    width: 1920
-    //    height: 720
+    //        width: 1920
+    //        height: 720
     // LODPI
     width: 1280
     height: 480
@@ -85,6 +85,10 @@ Window {
     }
     // define some variables to use later
     readonly property bool debugRectangles: true
+    readonly property int fontSizeExtraSmall: Qt.application.font.pixelSize * 0.8
+    readonly property int fontSizeMedium: Qt.application.font.pixelSize * 1.5
+    readonly property int fontSizeLarge: Qt.application.font.pixelSize * 2
+    readonly property int fontSizeExtraLarge: Qt.application.font.pixelSize * 5
 
     // Dashboards are typically in a landscape orientation, so we need to ensure
     // our height is never greater than our width.
@@ -104,16 +108,80 @@ Window {
             visible: debugRectangles
         }
 
-        Text {
-            id: element
-            color: "#ffffff"
-            text: carstate.carSpeed
-            font.pixelSize: 40
-            fontSizeMode: Text.HorizontalFit
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.AlignHCenter
+        GridLayout {
+            rows: 1
+            columns: 3
+            anchors.fill: parent
+
+
+            ColumnLayout {
+                id: leftColumn
+                Layout.preferredWidth: window.width * 0.3
+                Layout.preferredHeight: parent.height
+                Rectangle {
+                    height: parent.height
+                    width: parent.width
+                    color: "#494949"
+                    visible: debugRectangles
+                }
+//                Text {
+//                    id: element1
+//                    color: "#ffffff"
+//                    text: carstate.carSpeed
+//                    font.pixelSize: fontSizeExtraLarge
+//                    fontSizeMode: Text.HorizontalFit
+//                    horizontalAlignment: Text.AlignHCenter
+//                }
+
+            }
+
+            ColumnLayout {
+                id: centerColumn
+                Layout.preferredWidth: window.width * 0.4
+                Layout.preferredHeight: parent.height
+
+                Rectangle {
+                    height: parent.height
+                    width: parent.width
+                    color: "#595959"
+                    visible: debugRectangles
+                }
+                Text {
+                    id: element2
+                    color: "#ffffff"
+                    text: carstate.carSpeed
+                    font.pixelSize: fontSizeExtraLarge
+                    fontSizeMode: Text.HorizontalFit
+                    //horizontalAlignment: Text.AlignHCenter
+                    Layout.alignment: Qt.AlignVCenter | Qt.AlignCenter
+                }
+
+            }
+
+            ColumnLayout {
+                id: rightColumn
+                Layout.preferredWidth: window.width * 0.3
+                Layout.preferredHeight: parent.height
+
+                Rectangle {
+                    height: parent.height
+                    width: parent.width
+                    color: "#696969"
+                    visible: debugRectangles
+                }
+//                Text {
+//                    id: element3
+//                    color: "#ffffff"
+//                    text: carstate.carSpeed
+//                    font.pixelSize: fontSizeExtraLarge
+//                    fontSizeMode: Text.HorizontalFit
+//                    horizontalAlignment: Text.AlignHCenter
+//                }
+
+            }
         }
+
+
 
     }
     Item {
@@ -186,6 +254,16 @@ Window {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
